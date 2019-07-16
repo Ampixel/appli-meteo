@@ -1,0 +1,9 @@
+<form>
+    <div class="col">
+        <input [(ngModel)]="inputValue" [ngModelOptions]="{standalone: true}" type="text" class="form-control"
+            placeholder="Nom de la ville">
+        <button type="submit" class="btn btn-warning " [disabled]="meteoVille === '' " (click)="getRecupeInfos()">Valider</button>
+        <button class="btn btn-success" (click)="onGeolocation()">Me localiser</button>
+    </div>
+</form>
+<h2>{{getMeteoVille()}}</h2>

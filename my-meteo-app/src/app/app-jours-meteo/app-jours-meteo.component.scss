@@ -1,0 +1,39 @@
+ul {
+    li.list-group-item {
+       border: none;
+       border-bottom: 1.25px solid white;
+       color: white;
+       background: none;
+    }
+}
+
+ul{
+    border: none;
+}
+
+// dégrader pour mauvaise meteo
+.badColor{
+    background: -webkit-linear-gradient(#797b7c,#a8b3bd);
+    background: linear-gradient(#797b7c,#a8b3bd); /* W3C */
+    background: -moz-linear-gradient(#797b7c,#a8b3bd); /* FF3.6+ */
+    background: -o-linear-gradient(#797b7c,#a8b3bd); /* Opera 11.10+ */
+    background: -ms-linear-gradient(#797b7c,#a8b3bd); /* IE10+ */
+}
+
+// dégrader pour beau jours
+.sunColor{
+    background: -webkit-linear-gradient(#4fbed0,#247ccc);
+    background: linear-gradient(#4fbed0,#247ccc); /* W3C */
+    background: -moz-linear-gradient(#4fbed0,#247ccc); /* FF3.6+ */
+    background: -o-linear-gradient(#4fbed0,#247ccc); /* Opera 11.10+ */
+    background: -ms-linear-gradient(#4fbed0,#247ccc); /* IE10+ */
+}
+
+// dégrader pour nuits
+.nightColor{
+    background: -webkit-linear-gradient(#c7ccc2,#393e67);
+    background: linear-gradient(#c7ccc2,#393e67); /* W3C */
+    background: -moz-linear-gradient(#c7ccc2,#393e67); /* FF3.6+ */
+    background: -o-linear-gradient(#c7ccc2,#393e67); /* Opera 11.10+ */
+    background: -ms-linear-gradient(#c7ccc2,#393e67); /* IE10+ */
+}

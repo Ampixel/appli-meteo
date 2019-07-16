@@ -1,0 +1,23 @@
+// dégrader principale
+@mixin background_gradient($primary_gradient:#cedce7,$secondary_gradient:white,$default:#cedce7){
+  background: $default; /* Old browsers */
+  background: -moz-linear-gradient($primary_gradient 50%, $secondary_gradient 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient($primary_gradient 50%,$secondary_gradient 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient($primary_gradient 50%,$secondary_gradient 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient($primary_gradient 50%,$secondary_gradient 100%); /* IE10+ */
+  background: linear-gradient($primary_gradient 50%,$secondary_gradient 100%); /* W3C */
+}
+
+body{
+  @include background_gradient($primary_gradient:#cedce7,$secondary_gradient:white);
+  margin: auto;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #cedce7;
+  min-height: 100%;
+  
+}
+
+html{
+    min-height : 100%; 
+}
+

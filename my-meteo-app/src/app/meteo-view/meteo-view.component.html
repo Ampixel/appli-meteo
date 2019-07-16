@@ -1,0 +1,27 @@
+<header >
+    <div class="container">
+      <div class="row">
+        <app-my-app-header-meteo></app-my-app-header-meteo>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="row">
+        <app-app-ville-select></app-app-ville-select>
+    </div>
+    <div class="justify-content-center">
+      <div class="row">
+                <app-app-jours-meteo class="col-md-auto" *ngFor="let infos_meteo of getWeather()"
+                            [icones]="infos_meteo.weather"
+                            [meteo_heures]="infos_meteo.dt_txt"
+                            [temperature_max]="infos_meteo.main.temp_max" 
+                            [temperature_min]="infos_meteo.main.temp_min" 
+                            [wind]="infos_meteo.wind.speed"
+                            [cloud]="infos_meteo.clouds.all"
+                            ></app-app-jours-meteo>
+      </div>
+    </div>
+  </main>
+  <footer >
+      <p><a href="#">Mentions Légales</a></p>
+  </footer>

@@ -1,0 +1,12 @@
+<div class="col-md-3 offset-md-6 col-sm-3 col-lg-3">
+    <ul class="list-group" [ngClass]="getElements('class')">
+        <li class="list-group-item">
+            <div><img [src]="getElements()"/></div>
+            <p>Jour : {{ meteo_heures | date :'medium'}}</p>
+        </li>
+    <li class="list-group-item">T°C min: {{ temperature_min }}°</li>
+        <li class="list-group-item">T°C max: {{ temperature_max }}°</li>
+        <li class="list-group-item">Vent: {{ wind }}km/h</li>
+        <li class="list-group-item">Nuageux: {{ cloud }}%</li>
+    </ul>
+</div>

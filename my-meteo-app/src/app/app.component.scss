@@ -1,0 +1,69 @@
+@mixin transition($transition) {
+    -moz-keyframes: $transition;
+    -webkit-animation:$transition;
+    -ms-animation:$transition;
+    animation:$transition;
+    
+}
+
+div{
+    height: 100%;
+}
+
+//scss loader 
+.contener_general{
+    -webkit-transform:translate(-50%, -50%) rotate(45deg);
+    -moz-transform:translate(-50%, -50%) rotate(45deg);
+    -ms-transform:translate(-50%, -50%) rotate(45deg);
+    transform:translate(-50%, -50%) rotate(45deg);
+    height:88px;
+    height: 88px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+} 
+    
+.contener_mixte{
+    width:88px;
+    height:88px;
+
+} 
+    
+.carrecolor{
+    width:40px;
+    height:40px} 
+    
+.carre_1, .carre_2, .carre_3, .carre_4{
+    position:absolute;
+    @include transition(animcarre_one 1.3s infinite ease)
+} 
+    
+.carre_1{border:1px solid #CB2025;top:0;left:0} 
+.carre_2{border:1px solid #F8B334;top:0;left:48px} 
+.carre_3{border:1px solid #00A096;top:48px;left:0} 
+.carre_4{border:1px solid #97BF0D;top:48px;left:48px} 
+  
+
+@-webkit-keyframes animcarre_one{
+    0%{position:absolute;-webkit-transform:rotate(0deg)} 
+    50%{top:24px;left:24px;position:absolute;opacity:0.5} 
+    100%{position:absolute;-webkit-transform:rotate(360deg)}
+} 
+
+@-moz-keyframes animcarre_one{
+    0%{position:absolute;-moz-transform:rotate(0deg)} 
+    50%{top:24px;left:24px;position:absolute;opacity:0.5} 
+    100%{position:absolute;-moz-transform:rotate(360deg)}
+} 
+
+@-ms-keyframes animcarre_one{
+    0%{position:absolute;-ms-transform:rotate(0deg)} 
+    50%{top:24px;left:24px;position:absolute;opacity:0.5} 
+    100%{position:absolute;-ms-transform:rotate(360deg)}
+} 
+
+@keyframes animcarre_one{
+    0%{position:absolute;transform:rotate(0deg)} 
+    50%{top:24px;left:24px;position:absolute;opacity:0.5} 
+    100%{position:absolute;transform:rotate(360deg)}
+}
